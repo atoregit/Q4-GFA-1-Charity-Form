@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<div class="container">
+        <header>
+            <img src="https://www.gk1world.com/Images/Revamp2019/GK%20white.png" alt="Logo" width=400 class="r">
+            <h1>Sign Up Page</h1>
+        </header>
+        <p>Gawad Kalinga aims to build communities across the Philippines, continously mapping barangays where the poorest of the poor are.</p>
+        <p>I personally support the charity because:</p>
+        <ul>
+            <li>They uplift poor people and gives them a home.</li>
+            <li>They allow neglected people to form bonds and make a community.</li>
+            <li>They have already built numerous facilities locally and nationally.</li>
+        </ul>
+		<button type="button" class="joinbutton" data-toggle="modal" data-target="#signupmodal">Support Now!</button>
+	</div>
+
+	<div class="modal fade" id="signupmodal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Sign up for Gawad Kalinga</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form id="signupForm" onsubmit="return submitForm();">
+						<div class="form-group row g-3">
+                            <div class="col">
+                                <label for="fname">First Name:</label>
+                                <input type="text" class="form-control" id="fname" required>
+                            </div>
+                            <div class="col">
+                                <label for="lname">Last Name:</label>
+                                <input type="text" class="form-control" id="lname" required>
+                            </div>
+						</div>
+						<div class="form-group">
+							<label for="email">Email:</label>
+							<input type="text" class="form-control" id="email" required>
+						</div>
+						<div class="form-group">
+							<label for="contact">Contact No.</label>
+							<input type="text" class="form-control" id="contact">
+						</div>
+                        <div class="form-group">
+                            <label for="male">Sex</label><br>
+							<input type="radio"  class="form-check-label" name="sex" id="male" required>
+                            <label for="male">Male</label><br>
+                            <input type="radio"  class="form-check-label" name="sex" id="female" required>
+                            <label for="female">Female</label><br>
+                            <input type="radio"  class="form-check-label"  name="sex" id="nts" required>
+                            <label for="nts">Prefer not to say</label><br>
+						</div>
+						<button type="submit" class="btn btn-primary">Sign Up</button>
+                        <button type="button" onclick="reset()" class="btn btn-secondary">Reset</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
